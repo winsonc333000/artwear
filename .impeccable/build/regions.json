@@ -1,0 +1,214 @@
+{
+ "regions": [
+  {
+   "id": "wordmark",
+   "kind": "text",
+   "pixelBox": {
+    "x": 26,
+    "y": 16,
+    "w": 186,
+    "h": 42
+   },
+   "note": "ARTwear wordmark in high-contrast serif"
+  },
+  {
+   "id": "nav",
+   "kind": "control",
+   "pixelBox": {
+    "x": 705,
+    "y": 15,
+    "w": 304,
+    "h": 26
+   },
+   "note": "nav links Shop Artists Drop About Bag (0) in grotesk"
+  },
+  {
+   "id": "headline",
+   "kind": "text",
+   "pixelBox": {
+    "x": 20,
+    "y": 98,
+    "w": 335,
+    "h": 158
+   },
+   "note": "large high-contrast serif headline, two lines (to read: Authentic artist worn clothes)"
+  },
+  {
+   "id": "hero-coat",
+   "kind": "image",
+   "pixelBox": {
+    "x": 450,
+    "y": 6,
+    "w": 335,
+    "h": 372
+   },
+   "note": "photo of one paint-splattered canvas chore coat hung on a wire hanger from a pin on a white wall, soft shadow"
+  },
+  {
+   "id": "label-card",
+   "kind": "chrome",
+   "pixelBox": {
+    "x": 780,
+    "y": 132,
+    "w": 165,
+    "h": 137
+   },
+   "note": "white wall label card with four corner pins and soft shadow"
+  },
+  {
+   "id": "label-text",
+   "kind": "text",
+   "pixelBox": {
+    "x": 795,
+    "y": 145,
+    "w": 140,
+    "h": 78
+   },
+   "note": "wall label text: artist name bold, garment and weeks worn, media, number and 1 of 1"
+  },
+  {
+   "id": "label-add",
+   "kind": "control",
+   "pixelBox": {
+    "x": 795,
+    "y": 231,
+    "w": 74,
+    "h": 22
+   },
+   "note": "black Add to bag button"
+  },
+  {
+   "id": "tabs",
+   "kind": "control",
+   "pixelBox": {
+    "x": 22,
+    "y": 388,
+    "w": 356,
+    "h": 42
+   },
+   "note": "category tabs All (underlined) Tops Bottoms Outerwear Aprons"
+  },
+  {
+   "id": "tile-1",
+   "kind": "image",
+   "pixelBox": {
+    "x": 30,
+    "y": 437,
+    "w": 180,
+    "h": 181
+   },
+   "note": "photo of a dark denim work jacket with paint on a hanger, light grey ground"
+  },
+  {
+   "id": "tile-2",
+   "kind": "image",
+   "pixelBox": {
+    "x": 231,
+    "y": 437,
+    "w": 180,
+    "h": 181
+   },
+   "note": "photo of cream painter's pants with blue paint hanging, light grey ground"
+  },
+  {
+   "id": "tile-3",
+   "kind": "image",
+   "pixelBox": {
+    "x": 431,
+    "y": 437,
+    "w": 180,
+    "h": 181
+   },
+   "note": "photo of a brown canvas studio apron with paint, light grey ground"
+  },
+  {
+   "id": "sold-dot",
+   "kind": "control",
+   "pixelBox": {
+    "x": 565,
+    "y": 445,
+    "w": 38,
+    "h": 34
+   },
+   "note": "black round Sold badge"
+  },
+  {
+   "id": "tile-4",
+   "kind": "image",
+   "pixelBox": {
+    "x": 631,
+    "y": 437,
+    "w": 180,
+    "h": 181
+   },
+   "note": "photo of a cream chore coat with paint on a hanger, light grey ground"
+  },
+  {
+   "id": "tile-5",
+   "kind": "image",
+   "pixelBox": {
+    "x": 831,
+    "y": 437,
+    "w": 180,
+    "h": 181
+   },
+   "note": "photo of olive work pants with paint, light grey ground"
+  },
+  {
+   "id": "cap-1",
+   "kind": "text",
+   "pixelBox": {
+    "x": 28,
+    "y": 620,
+    "w": 180,
+    "h": 54
+   },
+   "note": "catalog caption No. 028 artist garment media 1 of 1"
+  },
+  {
+   "id": "cap-2",
+   "kind": "text",
+   "pixelBox": {
+    "x": 230,
+    "y": 620,
+    "w": 180,
+    "h": 54
+   },
+   "note": "catalog caption No. 029"
+  },
+  {
+   "id": "cap-3",
+   "kind": "text",
+   "pixelBox": {
+    "x": 432,
+    "y": 620,
+    "w": 180,
+    "h": 54
+   },
+   "note": "catalog caption No. 030"
+  },
+  {
+   "id": "cap-4",
+   "kind": "text",
+   "pixelBox": {
+    "x": 629,
+    "y": 620,
+    "w": 180,
+    "h": 54
+   },
+   "note": "catalog caption No. 031"
+  },
+  {
+   "id": "cap-5",
+   "kind": "text",
+   "pixelBox": {
+    "x": 829,
+    "y": 620,
+    "w": 180,
+    "h": 54
+   },
+   "note": "catalog caption No. 032"
+  }
+ ],
+ "allowUncovered": true
+}

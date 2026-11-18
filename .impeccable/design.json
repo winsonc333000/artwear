@@ -1,0 +1,384 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-17T23:01:58.340718+00:00",
+  "title": "Design System: ARTwear",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "primary",
+        "displayName": "Gallery Ink",
+        "canonical": "#0d0d0d",
+        "tonalRamp": [
+          "#141414",
+          "#262626",
+          "#3d3d3c",
+          "#575756",
+          "#767574",
+          "#a3a2a0",
+          "#d6d5d2",
+          "#f4f3f4"
+        ]
+      },
+      "ink-hover": {
+        "role": "primary",
+        "displayName": "Warm Charcoal",
+        "canonical": "#2b2b2a",
+        "tonalRamp": [
+          "#141414",
+          "#262626",
+          "#3d3d3c",
+          "#575756",
+          "#767574",
+          "#a3a2a0",
+          "#d6d5d2",
+          "#f4f3f4"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "#4a4a49",
+        "tonalRamp": [
+          "#141414",
+          "#262626",
+          "#3d3d3c",
+          "#575756",
+          "#767574",
+          "#a3a2a0",
+          "#d6d5d2",
+          "#f4f3f4"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Pencil",
+        "canonical": "#6b6b6a",
+        "tonalRamp": [
+          "#141414",
+          "#262626",
+          "#3d3d3c",
+          "#575756",
+          "#767574",
+          "#a3a2a0",
+          "#d6d5d2",
+          "#f4f3f4"
+        ]
+      },
+      "gallery-wall": {
+        "role": "neutral",
+        "displayName": "Gallery Wall",
+        "canonical": "#f4f3f4",
+        "tonalRamp": [
+          "#141414",
+          "#262626",
+          "#3d3d3c",
+          "#575756",
+          "#767574",
+          "#a3a2a0",
+          "#d6d5d2",
+          "#f4f3f4"
+        ]
+      },
+      "wall-shade": {
+        "role": "neutral",
+        "displayName": "Wall Shade",
+        "canonical": "#efefef",
+        "tonalRamp": [
+          "#141414",
+          "#262626",
+          "#3d3d3c",
+          "#575756",
+          "#767574",
+          "#a3a2a0",
+          "#d6d5d2",
+          "#f4f3f4"
+        ]
+      },
+      "label-card": {
+        "role": "neutral",
+        "displayName": "Label Card",
+        "canonical": "#fbfaf8",
+        "tonalRamp": [
+          "#1c1b18",
+          "#34322d",
+          "#4f4c45",
+          "#6e6a61",
+          "#8f8b81",
+          "#b3b0a8",
+          "#d9d7d1",
+          "#fbfaf8"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#d6d5d2",
+        "tonalRamp": [
+          "#1c1b18",
+          "#34322d",
+          "#4f4c45",
+          "#6e6a61",
+          "#8f8b81",
+          "#b3b0a8",
+          "#d9d7d1",
+          "#fbfaf8"
+        ]
+      },
+      "pin": {
+        "role": "neutral",
+        "displayName": "Pin Grey",
+        "canonical": "#b3b0a8",
+        "tonalRamp": [
+          "#1c1b18",
+          "#34322d",
+          "#4f4c45",
+          "#6e6a61",
+          "#8f8b81",
+          "#b3b0a8",
+          "#d9d7d1",
+          "#fbfaf8"
+        ]
+      },
+      "error": {
+        "role": "functional",
+        "displayName": "Oxide Red",
+        "canonical": "#8f1d14",
+        "tonalRamp": [
+          "#2a0806",
+          "#4a0f0a",
+          "#6e170f",
+          "#8f1d14",
+          "#b4473c",
+          "#d3847b",
+          "#ebc1bb",
+          "#f8ebe9"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "ARTwear wordmark, header (fluid) and footer (30px). Intended face Caesura; Prata is the current stand-in."
+      },
+      "display": {
+        "displayName": "Display",
+        "purpose": "Inner-page titles; piece title one step smaller. No visible headline on home."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles; artist-index names run larger at clamp(28px, 3.6vw, 56px)."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "About steps, bag items, checkout legends."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Opening paragraphs, max 60ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text, tabular numerals. Intended face Aktiv Grotesk; Hanken Grotesk is the current stand-in."
+      },
+      "nav": {
+        "displayName": "Nav",
+        "purpose": "Header links, 600."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Wall label text; artist line 700 at 1.12em."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Checklist captions under tiles; 'No.' in 700."
+      }
+    },
+    "fonts": {
+      "intended": {
+        "display": "Caesura",
+        "text": "Aktiv Grotesk"
+      },
+      "current": {
+        "display": "Prata 400 (next/font, --font-serif)",
+        "text": "Hanken Grotesk 400/500/600/700 (next/font, --font-sans)"
+      },
+      "status": "Stand-ins until licensed files are supplied."
+    },
+    "shadows": [
+      {
+        "name": "pinned-paper",
+        "value": "0 1px 2px rgba(20,18,14,0.08), 0 8px 18px -6px rgba(20,18,14,0.12)",
+        "purpose": "Wall label only."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Every transition and the hero settle."
+      },
+      {
+        "name": "settle",
+        "value": "2.4s rotate 2.4deg > -1.3 > 0.6 > -0.2 > 0, origin 50% 4%",
+        "purpose": "The one authored moment: the hero garment settles on its hook. Off under reduced motion."
+      },
+      {
+        "name": "button",
+        "value": "160ms",
+        "purpose": "Button fill/colour changes."
+      },
+      {
+        "name": "tile-zoom",
+        "value": "500ms, scale 1.035",
+        "purpose": "Tile image on hover."
+      },
+      {
+        "name": "list-quiet",
+        "value": "240ms, opacity 0.28",
+        "purpose": "Artist index: other rows quiet on hover."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "grid-4",
+        "value": "960px"
+      },
+      {
+        "name": "stack",
+        "value": "860px"
+      },
+      {
+        "name": "narrow",
+        "value": "520px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Add to bag on the wall label; square ink block.",
+      "html": "<button class=\"ds-btn\">Add to bag</button>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;font-family:var(--sans,'Hanken Grotesk',sans-serif);font-weight:600;font-size:14px;padding:.38em .85em;background:var(--ink,#0d0d0d);color:var(--wall,#f4f3f4);border:1px solid var(--ink,#0d0d0d);border-radius:0;cursor:pointer;transition:background-color 160ms cubic-bezier(.16,1,.3,1),color 160ms cubic-bezier(.16,1,.3,1)}.ds-btn:hover{background:#2b2b2a}.ds-btn:active{background:var(--wall,#f4f3f4);color:var(--ink,#0d0d0d)}.ds-btn:focus-visible{outline:2px solid var(--ink,#0d0d0d);outline-offset:3px}"
+    },
+    {
+      "name": "In-bag / Ghost Button",
+      "kind": "button",
+      "refersTo": "button-in-bag",
+      "description": "Outline state once a piece is in the bag.",
+      "html": "<a class=\"ds-btn-in\" href=\"#\">In your bag</a>",
+      "css": ".ds-btn-in{display:inline-flex;font-family:var(--sans,'Hanken Grotesk',sans-serif);font-weight:600;font-size:16px;padding:14px 28px;min-width:220px;justify-content:center;background:transparent;color:var(--ink,#0d0d0d);border:1px solid var(--ink,#0d0d0d);border-radius:0;text-decoration:none;transition:background-color 160ms,color 160ms}.ds-btn-in:hover{background:var(--ink,#0d0d0d);color:var(--wall,#f4f3f4)}.ds-btn-in:focus-visible{outline:2px solid var(--ink,#0d0d0d);outline-offset:3px}"
+    },
+    {
+      "name": "Sold Button",
+      "kind": "button",
+      "refersTo": "button-disabled",
+      "description": "Disabled state for sold pieces.",
+      "html": "<button class=\"ds-btn-sold\" disabled>Sold</button>",
+      "css": ".ds-btn-sold{font-family:var(--sans,'Hanken Grotesk',sans-serif);font-weight:600;font-size:14px;padding:.38em .85em;background:transparent;color:var(--ink-3,#6b6b6a);border:1px solid var(--rule,#d6d5d2);border-radius:0;cursor:not-allowed}"
+    },
+    {
+      "name": "Wall Label",
+      "kind": "custom",
+      "refersTo": "wall-label",
+      "description": "Signature pinned tombstone label beside a hung piece.",
+      "html": "<aside class=\"ds-wl\"><p class=\"ds-wl-a\"><a href=\"#\">Sample Artist</a> /</p><p>Chore coat, worn 5 weeks</p><p>Cotton duck, acrylic, plaster</p><p class=\"ds-wl-no\">No. 031 · 1 of 1</p><button class=\"ds-wl-btn\">Add to bag</button></aside>",
+      "css": ".ds-wl{display:inline-block;background-color:var(--card,#fbfaf8);color:var(--ink,#0d0d0d);font-family:var(--sans,'Hanken Grotesk',sans-serif);font-size:14px;line-height:1.45;padding:20px 22px 22px;white-space:nowrap;box-shadow:0 1px 2px rgba(20,18,14,.08),0 8px 18px -6px rgba(20,18,14,.12);background-image:radial-gradient(circle at 7px 7px,#b3b0a8 2.2px,transparent 2.8px),radial-gradient(circle at calc(100% - 7px) 7px,#b3b0a8 2.2px,transparent 2.8px),radial-gradient(circle at 7px calc(100% - 7px),#b3b0a8 2.2px,transparent 2.8px),radial-gradient(circle at calc(100% - 7px) calc(100% - 7px),#b3b0a8 2.2px,transparent 2.8px)}.ds-wl p{margin:0}.ds-wl p+p{margin-top:.15em}.ds-wl-a{font-weight:700;font-size:1.12em;margin-bottom:.35em!important}.ds-wl-a a{color:inherit;text-decoration:none}.ds-wl-a a:hover{text-decoration:underline}.ds-wl-no{margin:.7em 0 .85em!important}.ds-wl-btn{font:inherit;font-weight:600;padding:.38em .85em;background:#0d0d0d;color:#f4f3f4;border:1px solid #0d0d0d;border-radius:0;cursor:pointer}.ds-wl-btn:hover{background:#2b2b2a}.ds-wl-btn:focus-visible{outline:2px solid #0d0d0d;outline-offset:3px}"
+    },
+    {
+      "name": "Piece Tile",
+      "kind": "card",
+      "refersTo": "tile-frame",
+      "description": "Square Wall Shade frame with checklist caption and Sold dot.",
+      "html": "<a class=\"ds-tile\" href=\"#\"><span class=\"ds-tile-f\"><span class=\"ds-dot\">Sold</span></span><span class=\"ds-cap\"><strong>No. 030</strong><span>Sample Artist / Studio apron</span><span>Canvas, acrylic, plaster</span><span class=\"ds-sold\">Sold</span></span></a>",
+      "css": ".ds-tile{display:block;width:220px;text-decoration:none;color:#0d0d0d;font-family:var(--sans,'Hanken Grotesk',sans-serif)}.ds-tile-f{position:relative;display:block;aspect-ratio:1;background:var(--wall-shade,#efefef);overflow:hidden}.ds-dot{position:absolute;top:8px;right:8px;width:44px;aspect-ratio:1;border-radius:50%;background:#0d0d0d;color:#f4f3f4;display:grid;place-items:center;font-size:12px;font-weight:700}.ds-cap{display:block;margin-top:8px;font-size:14px;line-height:1.32}.ds-cap>*{display:block}.ds-cap strong{font-weight:700}.ds-tile:hover .ds-cap span:first-of-type{text-decoration:underline}.ds-sold{color:var(--ink-3,#6b6b6a)}.ds-tile:focus-visible{outline:2px solid #0d0d0d;outline-offset:3px}"
+    },
+    {
+      "name": "Header Nav",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Serif wordmark with lowercase tagline; sans 600 links with ink underline for current.",
+      "html": "<header class=\"ds-hd\"><div><a class=\"ds-wm\" href=\"#\">ARTwear</a><p class=\"ds-tag\">authentic artist work clothes</p></div><nav class=\"ds-nav\"><a href=\"#\" aria-current=\"page\">Shop</a><a href=\"#\">Artists</a><a href=\"#\">Drop</a><a href=\"#\">About</a><a href=\"#\">Bag (0)</a></nav></header>",
+      "css": ".ds-hd{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;background:#f4f3f4;color:#0d0d0d;padding:20px 32px}.ds-wm{font-family:var(--serif,'Prata',Georgia,serif);font-size:48px;line-height:1;letter-spacing:-.015em;color:inherit;text-decoration:none}.ds-tag{margin:8px 0 0;font-family:var(--sans,'Hanken Grotesk',sans-serif);font-size:14px;color:#4a4a49;letter-spacing:.01em}.ds-nav{display:flex;gap:32px;font-family:var(--sans,'Hanken Grotesk',sans-serif);font-size:16px;font-weight:600}.ds-nav a{color:inherit;text-decoration:none;padding-block:2px;border-bottom:1px solid transparent}.ds-nav a:hover,.ds-nav a[aria-current=page]{border-bottom-color:#0d0d0d}.ds-nav a:focus-visible{outline:2px solid #0d0d0d;outline-offset:3px}"
+    },
+    {
+      "name": "Category Tabs",
+      "kind": "chip",
+      "refersTo": "nav",
+      "description": "Text tabs; selected 700 with 2px ink underline.",
+      "html": "<div class=\"ds-tabs\" role=\"tablist\"><button class=\"ds-tab\" aria-selected=\"true\">All</button><button class=\"ds-tab\">Tops</button><button class=\"ds-tab\">Bottoms</button><button class=\"ds-tab\">Outerwear</button><button class=\"ds-tab\">Aprons</button></div>",
+      "css": ".ds-tabs{display:flex;gap:36px;font-family:var(--sans,'Hanken Grotesk',sans-serif);font-size:18px}.ds-tab{font:inherit;color:#0d0d0d;background:none;border:0;padding:0 0 4px;border-bottom:2px solid transparent;cursor:pointer}.ds-tab:hover{border-bottom-color:#d6d5d2}.ds-tab[aria-selected=true]{font-weight:700;border-bottom-color:#0d0d0d}.ds-tab:focus-visible{outline:2px solid #0d0d0d;outline-offset:3px}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "Square Label Card field; ink focus; Oxide Red error.",
+      "html": "<label class=\"ds-field\"><span>Email</span><input placeholder=\"you@example.com\"></label>",
+      "css": ".ds-field{display:grid;gap:6px;font-family:var(--sans,'Hanken Grotesk',sans-serif);color:#0d0d0d}.ds-field span{font-size:14px;font-weight:600}.ds-field input{font:inherit;font-size:16px;color:#0d0d0d;background:#fbfaf8;border:1px solid #6b6b6a;border-radius:0;padding:11px 12px}.ds-field input:focus-visible{outline:2px solid #0d0d0d;outline-offset:0;border-color:#0d0d0d}.ds-field input[aria-invalid=true]{border-color:#8f1d14}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Bare Gallery Wall",
+    "overview": "**Creative North Star: \"The Bare Gallery Wall\"**\n\nThe site is a white gallery wall. Garments hang on it like artworks, each with a pinned tombstone label, and the catalog below reads as the show's checklist. The interface is black type and black controls on an off-white wall. All colour on screen comes from paint on the garments, so the UI never competes with the work. The density is low at the top and calm and orderly below: one hung piece with empty wall around it, then a numbered grid.\n\nThe two faces split the work. A high-contrast serif carries the wordmark, page titles and artist names, the way a gallery uses a name on a wall. A neo-grotesk carries everything a visitor reads or operates. Every piece is numbered (\"No. 031\") and stated as \"1 of 1\" or \"Sold\", in the voice of a museum checklist, not a shop.\n\nThe build deliberately rejects the streetwear drop template (a campaign photo with a CTA over a product grid). The system has no display headline over the hero, no gradient, no rounded \"card UI\" and no accent colour.\n\nThe faces in use are stand-ins. The intended system is **Caesura** for display and **Aktiv Grotesk** for text and UI, both pinned by the founder. **Prata** and **Hanken Grotesk** (via next/font, `--font-serif` / `--font-sans`) render until the licensed files arrive. Swap the files without changing the roles, the sizes or the weights, then check the wordmark and the wall label against the comp again.\n\nAll artists, pieces and prices in the build are placeholders. The footer says so (\"Preview site: artists, pieces and prices shown are samples.\").",
+    "keyCharacteristics": [
+      "Off-white wall ground (#f4f3f4), with black used only for type and controls.",
+      "Colour comes only from garment photography. Garment plates sit on neutral grounds.",
+      "The pinned tombstone wall label is the signature component.",
+      "Corners are square everywhere. The only circles are the Sold dot and the label pins.",
+      "Numbered checklist captions: No., artist / garment, media, 1 of 1 or Sold.",
+      "Fluid sizing tied to page width (the comp is 1024 wide), using clamp() throughout."
+    ],
+    "rules": [
+      {
+        "name": "The Paint Only Rule",
+        "body": "Colour on screen comes from paint on the garments. UI chrome stays ink on wall, with Oxide Red reserved for validation errors.",
+        "section": "colors"
+      },
+      {
+        "name": "The Neutral Plate Rule",
+        "body": "Garment and studio rasters sit on neutral grounds that read as the wall or Wall Shade. A plate with a coloured or scenic ground breaks the wall.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "The serif names things (the wordmark, titles, artists, quotes). The grotesk tells and operates (labels, captions, nav, buttons, forms). Never set controls or captions in the serif.",
+        "section": "typography"
+      },
+      {
+        "name": "The Lowercase Tagline Rule",
+        "body": "The tagline is always \"authentic artist work clothes\", in lowercase, set in Graphite at caption size under the wordmark.",
+        "section": "typography"
+      },
+      {
+        "name": "The Empty Wall Rule",
+        "body": "On the home page, the hung piece gets the wall to itself. Nothing else sits in the first band apart from the header and the piece's own label.",
+        "section": "layout"
+      },
+      {
+        "name": "The Only Object Rule",
+        "body": "A shadow means \"a physical thing on the wall\". Only the wall label earns one, and buttons, tiles, panels and inputs stay flat.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep the UI to ink (#0d0d0d) on the gallery wall (#f4f3f4), and let garment paint supply all colour.",
+      "**Do** credit every piece the checklist way: No., artist / garment, media, then 1 of 1 or Sold.",
+      "**Do** use the pinned wall label wherever a single piece is offered for sale on a wall composition.",
+      "**Do** mark sold pieces honestly with the black Sold dot and a Pencil \"Sold\" line, and disable the button.",
+      "**Do** keep garment and studio plates on neutral grounds that sit quietly on the wall.",
+      "**Do** size type and spacing fluidly with clamp(), as globals.css does, and keep every corner square.",
+      "**Do** respect reduced motion: the hero \"settle\" swing (2.4s, ease-out) and all transitions switch off.",
+      "**Do** label sample content as samples until real artists, pieces and prices exist."
+    ],
+    "donts": [
+      "**Don't** add an accent colour, gradient or tinted UI surface. Oxide Red is for validation only.",
+      "**Don't** put a campaign headline or CTA over a hero photo. The home page is a hung piece with its label.",
+      "**Don't** round buttons, inputs, tiles or panels. Circles are only for the Sold dot and label pins.",
+      "**Don't** add shadows to anything except the wall label.",
+      "**Don't** set the tagline in title case, or use the serif for buttons, captions or form text.",
+      "**Don't** use \"distressed\", \"limited\" or countdown language, or fake scarcity badges. Scarcity is stated as \"1 of 1\"."
+    ]
+  }
+}

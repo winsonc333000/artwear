@@ -1,0 +1,1073 @@
+/* ARTwear: a bare gallery wall. Black is for type and controls; colour belongs to the paint on the garments. */
+:root {
+  --wall: #f4f3f4;
+  --wall-shade: #efefef;
+  --card: #fbfaf8;
+  --ink: #0d0d0d;
+  --ink-2: #4a4a49;
+  --ink-3: #6b6b6a;
+  --rule: #d6d5d2;
+  --pin: #b3b0a8;
+
+  --serif: var(--font-serif), "Prata", Georgia, serif;
+  --sans: var(--font-sans), "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+
+  /* The comp is 1024 wide; the first viewport scales with the page width. */
+  --gutter: clamp(16px, 2.93vw, 48px);
+  --gap: clamp(12px, 1.95vw, 32px);
+  --header-h: clamp(92px, 10vw, 150px);
+  --cap: clamp(12px, 1.17vw, 15px);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scrollbar-color: #9b9a97 var(--wall);
+  scrollbar-width: thin;
+}
+
+body {
+  margin: 0;
+  background: var(--wall);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  caret-color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--wall);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  position: relative;
+  z-index: 5;
+  height: var(--header-h);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: clamp(14px, 1.56vw, 24px) var(--gutter) 0 calc(var(--gutter) - 0.4vw);
+  pointer-events: none;
+}
+
+.site-header a,
+.site-header p {
+  pointer-events: auto;
+}
+
+.wordmark {
+  font-family: var(--serif);
+  font-size: clamp(34px, 4.49vw, 66px);
+  line-height: 1;
+  letter-spacing: -0.015em;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.tagline {
+  margin-top: clamp(6px, 0.7vw, 10px);
+  font-size: clamp(13px, 1.17vw, 16px);
+  color: var(--ink-2);
+  letter-spacing: 0.01em;
+}
+
+.site-nav {
+  display: flex;
+  gap: clamp(16px, 2.6vw, 40px);
+  font-size: clamp(14px, 1.27vw, 17px);
+  font-weight: 600;
+  padding-top: clamp(2px, 0.4vw, 6px);
+}
+
+.site-nav a {
+  text-decoration: none;
+  padding-block: 2px;
+  border-bottom: 1px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  border-bottom-color: var(--ink);
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font: inherit;
+  font-weight: 600;
+  background: var(--ink);
+  color: var(--wall);
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 160ms var(--ease-out), color 160ms var(--ease-out);
+}
+
+.btn:hover {
+  background: #2b2b2a;
+}
+
+.btn:active {
+  background: var(--wall);
+  color: var(--ink);
+}
+
+.btn:disabled {
+  background: transparent;
+  color: var(--ink-3);
+  border-color: var(--rule);
+  cursor: not-allowed;
+}
+
+/* In the bag: the control inverts to an outline. */
+.btn-in {
+  background: transparent;
+  color: var(--ink);
+}
+
+.btn-in:hover {
+  background: var(--ink);
+  color: var(--wall);
+}
+
+.btn-sm {
+  font-size: clamp(11px, 0.98vw, 14px);
+  padding: 0.38em 0.85em;
+}
+
+.btn-lg {
+  font-size: 16px;
+  padding: 14px 28px;
+  min-width: 220px;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+}
+
+.btn-ghost:hover {
+  background: var(--ink);
+  color: var(--wall);
+}
+
+/* ---------- Wall label ---------- */
+
+.wall-label {
+  position: relative;
+  background: var(--card);
+  padding: clamp(12px, 1.4vw, 20px) clamp(12px, 1.45vw, 22px) clamp(14px, 1.5vw, 22px);
+  font-size: clamp(11px, 1.03vw, 14.5px);
+  line-height: 1.45;
+  color: var(--ink);
+  box-shadow: 0 1px 2px rgba(20, 18, 14, 0.08), 0 8px 18px -6px rgba(20, 18, 14, 0.12);
+  /* Four corner pins. */
+  background-image:
+    radial-gradient(circle at 7px 7px, var(--pin) 2.2px, transparent 2.8px),
+    radial-gradient(circle at calc(100% - 7px) 7px, var(--pin) 2.2px, transparent 2.8px),
+    radial-gradient(circle at 7px calc(100% - 7px), var(--pin) 2.2px, transparent 2.8px),
+    radial-gradient(circle at calc(100% - 7px) calc(100% - 7px), var(--pin) 2.2px, transparent 2.8px);
+}
+
+.wall-label p + p {
+  margin-top: 0.15em;
+}
+
+.wl-artist {
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 1.12em;
+  margin-bottom: 0.35em;
+}
+
+.wl-artist a {
+  text-decoration: none;
+}
+
+.wl-artist a:hover {
+  text-decoration: underline;
+}
+
+.wall-label .wl-no {
+  margin-top: 0.7em;
+  margin-bottom: 0.85em;
+  color: var(--ink);
+}
+
+/* ---------- Home: the wall ---------- */
+
+.home-wall {
+  position: relative;
+  margin-top: calc(-1 * var(--header-h));
+  height: 38.4vw;
+  min-height: 380px;
+}
+
+.hung {
+  position: absolute;
+  left: 50%;
+  top: 0.6vw;
+  width: 32.7vw;
+  height: 36.3vw;
+  translate: -50% 0;
+  margin: 0;
+  transform-origin: 50% 3%;
+}
+
+/* Hover: the coat swings on its hook (driven per frame in HungCoat) and a loupe magnifies the cloth. */
+.hung {
+  will-change: rotate;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hung {
+    cursor: none;
+  }
+}
+
+.loupe {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  width: 190px;
+  height: 190px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: var(--wall);
+  box-shadow: 0 0 0 1px var(--ink), 0 14px 32px -12px rgb(13 13 13 / 0.35);
+  pointer-events: none;
+  opacity: 0;
+  scale: 0.6;
+  transition: opacity 0.18s var(--ease-out), scale 0.24s var(--ease-out);
+  will-change: transform;
+}
+
+.loupe.is-on {
+  opacity: 1;
+  scale: 1;
+}
+
+.loupe img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: none;
+  object-fit: contain;
+  will-change: transform;
+}
+
+.hung img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  scale: 1.14;
+  /* Feather the photo's edges into the wall so no rectangle shows. */
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 9%, #000 91%, transparent), linear-gradient(to bottom, transparent, #000 5%, #000 94%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to right, transparent, #000 9%, #000 91%, transparent), linear-gradient(to bottom, transparent, #000 5%, #000 94%, transparent);
+  mask-composite: intersect;
+  transform-origin: 50% 4%;
+  animation: settle 2.4s var(--ease-out) both;
+}
+
+/* The one authored moment: the coat has just been hung and settles on its hook. */
+@keyframes settle {
+  0% {
+    transform: rotate(2.4deg);
+  }
+  30% {
+    transform: rotate(-1.3deg);
+  }
+  55% {
+    transform: rotate(0.6deg);
+  }
+  78% {
+    transform: rotate(-0.2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.home-wall .wall-label {
+  position: absolute;
+  left: calc(50% + 16.35vw + 2vw);
+  top: 12.9vw;
+  width: max-content;
+  min-width: 16.1vw;
+  white-space: nowrap;
+}
+
+/* ---------- Catalog ---------- */
+
+.catalog {
+  position: relative;
+  z-index: 1;
+  padding: 0 var(--gutter) clamp(56px, 7vw, 120px);
+}
+
+.tabs {
+  display: flex;
+  gap: clamp(18px, 2.9vw, 44px);
+  font-size: clamp(14px, 1.37vw, 19px);
+  padding-left: 0;
+  margin-left: -0.6vw;
+  margin-bottom: clamp(10px, 1.2vw, 18px);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tab {
+  font: inherit;
+  color: var(--ink);
+  background: none;
+  border: 0;
+  padding: 0 0 4px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+
+.tab[aria-selected="true"] {
+  font-weight: 700;
+  border-bottom-color: var(--ink);
+}
+
+.tab:hover {
+  border-bottom-color: var(--rule);
+}
+
+.tab[aria-selected="true"]:hover {
+  border-bottom-color: var(--ink);
+}
+
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  column-gap: var(--gap);
+  row-gap: clamp(28px, 3.4vw, 56px);
+}
+
+.tile-link {
+  display: block;
+  text-decoration: none;
+}
+
+.tile-frame {
+  position: relative;
+  display: block;
+  aspect-ratio: 1;
+  background: var(--wall-shade);
+  overflow: hidden;
+}
+
+.tile-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms var(--ease-out);
+}
+
+.tile-link:hover .tile-frame img {
+  transform: scale(1.035);
+}
+
+.sold-dot {
+  position: absolute;
+  top: 0.75vw;
+  right: 0.8vw;
+  width: clamp(32px, 3.4vw, 50px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--wall);
+  display: grid;
+  place-items: center;
+  font-size: clamp(10px, 0.98vw, 13px);
+  font-weight: 700;
+}
+
+.tile-cap {
+  display: block;
+  margin-top: clamp(6px, 0.7vw, 10px);
+  font-size: var(--cap);
+  line-height: 1.32;
+}
+
+.tile-cap > * {
+  display: block;
+}
+
+.tile-cap strong {
+  font-weight: 700;
+}
+
+.tile-link:hover .tile-cap span:first-of-type {
+  text-decoration: underline;
+}
+
+.is-sold .tile-cap span:last-child {
+  color: var(--ink-3);
+}
+
+.empty {
+  padding: 48px 0;
+  color: var(--ink-2);
+  max-width: 48ch;
+}
+
+/* ---------- Inner pages ---------- */
+
+.page {
+  padding: clamp(24px, 4vw, 64px) var(--gutter) clamp(64px, 8vw, 128px);
+}
+
+.page-head {
+  max-width: 62rem;
+  margin-bottom: clamp(32px, 4.5vw, 72px);
+}
+
+.page-head h1 {
+  font-size: clamp(40px, 6vw, 92px);
+}
+
+.page-head p {
+  margin-top: 18px;
+  max-width: 58ch;
+  font-size: clamp(16px, 1.3vw, 19px);
+  color: var(--ink-2);
+}
+
+.lede {
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.5;
+  max-width: 60ch;
+}
+
+/* Artists index: hovering one artist quiets the rest of the line-up. */
+.artist-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.artist-row a {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 1fr) clamp(120px, 14vw, 220px);
+  gap: var(--gap);
+  align-items: center;
+  padding: clamp(16px, 1.8vw, 26px) 0;
+  border-bottom: 1px solid var(--rule);
+  text-decoration: none;
+  transition: opacity 240ms var(--ease-out);
+}
+
+.artist-list:hover .artist-row a {
+  opacity: 0.28;
+}
+
+.artist-list:hover .artist-row a:hover,
+.artist-list .artist-row a:focus-visible {
+  opacity: 1;
+}
+
+.artist-row .name {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.6vw, 56px);
+  line-height: 1.05;
+}
+
+.artist-row .meta {
+  color: var(--ink-2);
+  font-size: clamp(14px, 1.15vw, 17px);
+}
+
+.artist-row img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Artist page */
+.artist-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  gap: clamp(28px, 4vw, 72px);
+  align-items: start;
+  margin-bottom: clamp(56px, 7vw, 112px);
+}
+
+.artist-top h1 {
+  font-size: clamp(44px, 6vw, 92px);
+}
+
+.artist-meta {
+  margin-top: 14px;
+  color: var(--ink-2);
+}
+
+.artist-bio {
+  margin-top: clamp(24px, 2.6vw, 40px);
+  font-size: clamp(17px, 1.35vw, 20px);
+  max-width: 52ch;
+}
+
+.artist-quote {
+  margin: clamp(24px, 2.6vw, 40px) 0 0;
+  padding: 0;
+  font-family: var(--serif);
+  font-size: clamp(20px, 1.8vw, 27px);
+  line-height: 1.3;
+  max-width: 34ch;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--ink-3);
+}
+
+.section-title {
+  font-size: clamp(28px, 3vw, 44px);
+  margin-bottom: clamp(18px, 2vw, 28px);
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: clamp(28px, 4vw, 72px);
+  align-items: start;
+  margin-bottom: clamp(56px, 7vw, 112px);
+}
+
+.portfolio img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+/* Piece page */
+.piece {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 96px);
+  align-items: start;
+}
+
+.piece-images {
+  display: grid;
+  gap: var(--gap);
+}
+
+.piece-images img {
+  width: 100%;
+  background: var(--wall-shade);
+}
+
+.piece-info {
+  position: sticky;
+  top: 24px;
+}
+
+.piece-info h1 {
+  font-size: clamp(40px, 4.6vw, 72px);
+}
+
+.piece-info .by {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.piece-price {
+  margin-top: clamp(20px, 2.2vw, 32px);
+  font-size: 24px;
+}
+
+.sample-note {
+  font-size: 13px;
+  color: var(--ink-3);
+}
+
+.specs {
+  margin: clamp(24px, 2.6vw, 36px) 0;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 8px 24px;
+  font-size: 15px;
+}
+
+.specs dt {
+  color: var(--ink-3);
+}
+
+.specs dd {
+  margin: 0;
+}
+
+.piece-note {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  max-width: 48ch;
+  color: var(--ink-2);
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: clamp(20px, 2.4vw, 36px);
+  font-size: 15px;
+}
+
+/* About */
+.steps {
+  list-style: none;
+  margin: clamp(40px, 5vw, 80px) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--gap);
+  border-top: 1px solid var(--ink);
+}
+
+.steps li {
+  padding-top: 18px;
+}
+
+.steps h2 {
+  font-size: clamp(22px, 2vw, 30px);
+  margin-bottom: 10px;
+}
+
+.steps p {
+  color: var(--ink-2);
+  max-width: 34ch;
+}
+
+/* Bag + checkout */
+.bag-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.bag-item {
+  display: grid;
+  grid-template-columns: clamp(84px, 9vw, 140px) 1fr auto;
+  gap: clamp(16px, 2vw, 32px);
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.bag-item img {
+  aspect-ratio: 1;
+  object-fit: cover;
+  background: var(--wall-shade);
+}
+
+.bag-item h2 {
+  font-size: clamp(22px, 2vw, 30px);
+}
+
+.bag-item p {
+  color: var(--ink-2);
+  font-size: 15px;
+}
+
+.link-btn {
+  font: inherit;
+  font-size: 15px;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  color: var(--ink);
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px 24px;
+  max-width: 420px;
+  margin: 32px 0 0 auto;
+  font-size: 16px;
+}
+
+.summary .total {
+  font-weight: 700;
+  font-size: 20px;
+  padding-top: 10px;
+  border-top: 1px solid var(--ink);
+}
+
+.summary .total + .total {
+  text-align: right;
+}
+
+.summary-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 28px;
+}
+
+.checkout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 96px);
+  align-items: start;
+}
+
+.checkout fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0 0 36px;
+}
+
+.checkout legend {
+  font-family: var(--serif);
+  font-size: clamp(24px, 2.2vw, 32px);
+  margin-bottom: 18px;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 20px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field.wide {
+  grid-column: 1 / -1;
+}
+
+.field label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.field input,
+.field select {
+  font: inherit;
+  font-size: 16px;
+  color: var(--ink);
+  background: var(--card);
+  border: 1px solid var(--ink-3);
+  border-radius: 0;
+  padding: 11px 12px;
+}
+
+.field input::placeholder {
+  color: #6f6e6b;
+}
+
+.field input:focus-visible,
+.field select:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 0;
+  border-color: var(--ink);
+}
+
+.field input[aria-invalid="true"] {
+  border-color: #8f1d14;
+}
+
+.field .err {
+  font-size: 13px;
+  color: #8f1d14;
+}
+
+.notice {
+  border: 1px solid var(--ink);
+  background: var(--card);
+  padding: 18px 20px;
+  margin-bottom: 28px;
+}
+
+.notice strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.order-side {
+  position: sticky;
+  top: 24px;
+  background: var(--card);
+  padding: clamp(20px, 2vw, 28px);
+}
+
+.order-side h2 {
+  font-size: 26px;
+  margin-bottom: 16px;
+}
+
+.order-line {
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 14px;
+}
+
+.order-line img {
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--rule);
+  padding: clamp(28px, 3vw, 44px) var(--gutter) clamp(36px, 4vw, 56px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) repeat(2, minmax(0, 1fr));
+  gap: var(--gap);
+  font-size: 14px;
+  color: var(--ink-2);
+}
+
+.site-footer .foot-mark {
+  font-family: var(--serif);
+  font-size: 30px;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.site-footer p + p {
+  margin-top: 6px;
+}
+
+.site-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.site-footer a {
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  :root {
+    --header-h: auto;
+  }
+
+  .site-header {
+    flex-direction: column;
+    gap: 14px;
+    padding-bottom: 8px;
+  }
+
+  .site-nav {
+    flex-wrap: wrap;
+    gap: 6px 18px;
+  }
+
+  .home-wall {
+    margin-top: 8px;
+    height: auto;
+    min-height: 0;
+    display: grid;
+    justify-items: center;
+    padding: 0 var(--gutter) 40px;
+    gap: 4px;
+  }
+
+  .hung {
+    position: relative;
+    left: auto;
+    top: auto;
+    translate: none;
+    width: min(78vw, 420px);
+    height: auto;
+    aspect-ratio: 335 / 372;
+  }
+
+  .home-wall .wall-label {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: max-content;
+    min-width: 0;
+    max-width: calc(100vw - 2 * var(--gutter));
+    white-space: normal;
+    font-size: 14px;
+  }
+
+  .btn-sm {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sold-dot {
+    top: 8px;
+    right: 8px;
+  }
+
+  .artist-row a {
+    grid-template-columns: minmax(0, 1fr) 96px;
+  }
+
+  .artist-row .meta {
+    grid-column: 1;
+  }
+
+  .artist-row img {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+  }
+
+  .artist-top,
+  .portfolio,
+  .piece,
+  .checkout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .piece-info,
+  .order-side {
+    position: static;
+  }
+
+  .steps {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    row-gap: 32px;
+  }
+
+  .site-footer {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .site-footer > :first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 520px) {
+  .fields {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .steps {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .bag-item {
+    grid-template-columns: 84px 1fr;
+  }
+
+  .bag-item > :last-child {
+    grid-column: 2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hung img {
+    animation: none;
+  }
+
+  .tile-frame img,
+  .artist-row a,
+  .btn,
+  .loupe {
+    transition: none;
+  }
+}
+
+.flush .catalog {
+  padding: 0;
+}
